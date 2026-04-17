@@ -5,6 +5,7 @@ set -e
 sudo docker pull rabbitmq:management
 
 sudo docker run -d \
+  --restart=always \
   --hostname rabbitmq_node1 \
   --name rabbit \
   -e RABBITMQ_DEFAULT_USER=rabbitmq \
