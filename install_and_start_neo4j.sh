@@ -1,14 +1,15 @@
 #!/bin/bash
 
-# 定义镜像版本
+set -e
+
 NEO4J_IMAGE="neo4j:2025.05.0"
 
 echo "===== 开始拉取 Neo4j 镜像 ====="
-# 拉取镜像
+
 sudo docker pull $NEO4J_IMAGE
 
 echo "===== 启动 Neo4j 容器 ====="
-# 启动容器
+
 sudo docker run -d \
   --restart=always \
   --name neo4j \
